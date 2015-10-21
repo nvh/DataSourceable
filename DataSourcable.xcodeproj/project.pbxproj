@@ -7,9 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B33448D71BD00A0000CC9D93 /* TableViewDataSourcableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33448D61BD00A0000CC9D93 /* TableViewDataSourcableSpec.swift */; settings = {ASSET_TAGS = (); }; };
+		B34ADF0C1BCD7622007CE244 /* SectionTypeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34ADF0B1BCD7622007CE244 /* SectionTypeSpec.swift */; settings = {ASSET_TAGS = (); }; };
+		B397D7E71BCD7365007687CD /* SectionableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B397D7E61BCD7365007687CD /* SectionableSpec.swift */; settings = {ASSET_TAGS = (); }; };
+		B397D7E91BCD7393007687CD /* DataSourceTypeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B397D7E81BCD7393007687CD /* DataSourceTypeSpec.swift */; settings = {ASSET_TAGS = (); }; };
+		B3AF7ECB1BD7E9A700EA4D88 /* CollectionViewDataSourcableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AF7ECA1BD7E9A700EA4D88 /* CollectionViewDataSourcableSpec.swift */; settings = {ASSET_TAGS = (); }; };
 		B3E89A871BCCDFB900C0FB4C /* DataSourcable.h in Headers */ = {isa = PBXBuildFile; fileRef = B3E89A861BCCDFB900C0FB4C /* DataSourcable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B3E89A8E1BCCDFBA00C0FB4C /* DataSourcable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E89A831BCCDFB900C0FB4C /* DataSourcable.framework */; settings = {ASSET_TAGS = (); }; };
-		B3E89A931BCCDFBA00C0FB4C /* DataSourcableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E89A921BCCDFBA00C0FB4C /* DataSourcableTests.swift */; };
+		B3E89A9E1BCCDFD800C0FB4C /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E89A9D1BCCDFD800C0FB4C /* State.swift */; settings = {ASSET_TAGS = (); }; };
+		B3E89AA01BCCDFF600C0FB4C /* EmptyCheckable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E89A9F1BCCDFF600C0FB4C /* EmptyCheckable.swift */; settings = {ASSET_TAGS = (); }; };
+		B3E89AA21BCCE02E00C0FB4C /* Loadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E89AA11BCCE02E00C0FB4C /* Loadable.swift */; settings = {ASSET_TAGS = (); }; };
+		B3E89AA41BCCE05100C0FB4C /* DataSourceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E89AA31BCCE05100C0FB4C /* DataSourceType.swift */; settings = {ASSET_TAGS = (); }; };
+		B3E89AA61BCCE05D00C0FB4C /* SectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E89AA51BCCE05D00C0FB4C /* SectionType.swift */; settings = {ASSET_TAGS = (); }; };
+		B3E89AA91BCCE0D500C0FB4C /* Sectionable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E89AA81BCCE0D500C0FB4C /* Sectionable.swift */; settings = {ASSET_TAGS = (); }; };
+		B3E89AAB1BCCE10F00C0FB4C /* TableViewDataSourcable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E89AAA1BCCE10F00C0FB4C /* TableViewDataSourcable.swift */; settings = {ASSET_TAGS = (); }; };
+		B3E89AAD1BCCE16A00C0FB4C /* CollectionViewDataSourcable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E89AAC1BCCE16A00C0FB4C /* CollectionViewDataSourcable.swift */; settings = {ASSET_TAGS = (); }; };
+		B3E89AAF1BCCE1E300C0FB4C /* LoadableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E89AAE1BCCE1E300C0FB4C /* LoadableSpec.swift */; settings = {ASSET_TAGS = (); }; };
+		B3E89AB11BCCEA6A00C0FB4C /* Cartfile.private in Resources */ = {isa = PBXBuildFile; fileRef = B3E89AB01BCCEA6A00C0FB4C /* Cartfile.private */; settings = {ASSET_TAGS = (); }; };
+		B3E89AB41BCCEAD300C0FB4C /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E89AB31BCCEAD300C0FB4C /* Quick.framework */; settings = {ASSET_TAGS = (); }; };
+		B3E89AB61BCCED6B00C0FB4C /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E89AB51BCCED6B00C0FB4C /* Nimble.framework */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,12 +39,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B33448D61BD00A0000CC9D93 /* TableViewDataSourcableSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewDataSourcableSpec.swift; sourceTree = "<group>"; };
+		B34ADF0B1BCD7622007CE244 /* SectionTypeSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionTypeSpec.swift; sourceTree = "<group>"; };
+		B397D7E61BCD7365007687CD /* SectionableSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionableSpec.swift; sourceTree = "<group>"; };
+		B397D7E81BCD7393007687CD /* DataSourceTypeSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataSourceTypeSpec.swift; path = DataSourcableTests/DataSourceTypeSpec.swift; sourceTree = SOURCE_ROOT; };
+		B3AF7ECA1BD7E9A700EA4D88 /* CollectionViewDataSourcableSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewDataSourcableSpec.swift; sourceTree = "<group>"; };
 		B3E89A831BCCDFB900C0FB4C /* DataSourcable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DataSourcable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3E89A861BCCDFB900C0FB4C /* DataSourcable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataSourcable.h; sourceTree = "<group>"; };
 		B3E89A881BCCDFBA00C0FB4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3E89A8D1BCCDFBA00C0FB4C /* DataSourcableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataSourcableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B3E89A921BCCDFBA00C0FB4C /* DataSourcableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourcableTests.swift; sourceTree = "<group>"; };
 		B3E89A941BCCDFBA00C0FB4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3E89A9D1BCCDFD800C0FB4C /* State.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		B3E89A9F1BCCDFF600C0FB4C /* EmptyCheckable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyCheckable.swift; sourceTree = "<group>"; };
+		B3E89AA11BCCE02E00C0FB4C /* Loadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loadable.swift; sourceTree = "<group>"; };
+		B3E89AA31BCCE05100C0FB4C /* DataSourceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSourceType.swift; sourceTree = "<group>"; };
+		B3E89AA51BCCE05D00C0FB4C /* SectionType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionType.swift; sourceTree = "<group>"; };
+		B3E89AA81BCCE0D500C0FB4C /* Sectionable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sectionable.swift; sourceTree = "<group>"; };
+		B3E89AAA1BCCE10F00C0FB4C /* TableViewDataSourcable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewDataSourcable.swift; sourceTree = "<group>"; };
+		B3E89AAC1BCCE16A00C0FB4C /* CollectionViewDataSourcable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewDataSourcable.swift; sourceTree = "<group>"; };
+		B3E89AAE1BCCE1E300C0FB4C /* LoadableSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadableSpec.swift; sourceTree = "<group>"; };
+		B3E89AB01BCCEA6A00C0FB4C /* Cartfile.private */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile.private; sourceTree = "<group>"; };
+		B3E89AB31BCCEAD300C0FB4C /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = SOURCE_ROOT; };
+		B3E89AB51BCCED6B00C0FB4C /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +75,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3E89AB61BCCED6B00C0FB4C /* Nimble.framework in Frameworks */,
+				B3E89AB41BCCEAD300C0FB4C /* Quick.framework in Frameworks */,
 				B3E89A8E1BCCDFBA00C0FB4C /* DataSourcable.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -53,6 +87,7 @@
 		B3E89A791BCCDFB900C0FB4C = {
 			isa = PBXGroup;
 			children = (
+				B3E89AB01BCCEA6A00C0FB4C /* Cartfile.private */,
 				B3E89A851BCCDFB900C0FB4C /* DataSourcable */,
 				B3E89A911BCCDFBA00C0FB4C /* DataSourcableTests */,
 				B3E89A841BCCDFB900C0FB4C /* Products */,
@@ -71,6 +106,8 @@
 		B3E89A851BCCDFB900C0FB4C /* DataSourcable */ = {
 			isa = PBXGroup;
 			children = (
+				B3E89A9D1BCCDFD800C0FB4C /* State.swift */,
+				B3E89AA71BCCE09C00C0FB4C /* Protocols */,
 				B3E89A861BCCDFB900C0FB4C /* DataSourcable.h */,
 				B3E89A881BCCDFBA00C0FB4C /* Info.plist */,
 			);
@@ -80,10 +117,40 @@
 		B3E89A911BCCDFBA00C0FB4C /* DataSourcableTests */ = {
 			isa = PBXGroup;
 			children = (
-				B3E89A921BCCDFBA00C0FB4C /* DataSourcableTests.swift */,
 				B3E89A941BCCDFBA00C0FB4C /* Info.plist */,
+				B397D7E81BCD7393007687CD /* DataSourceTypeSpec.swift */,
+				B34ADF0B1BCD7622007CE244 /* SectionTypeSpec.swift */,
+				B3E89AAE1BCCE1E300C0FB4C /* LoadableSpec.swift */,
+				B397D7E61BCD7365007687CD /* SectionableSpec.swift */,
+				B33448D61BD00A0000CC9D93 /* TableViewDataSourcableSpec.swift */,
+				B3AF7ECA1BD7E9A700EA4D88 /* CollectionViewDataSourcableSpec.swift */,
+				B3E89AB21BCCEABD00C0FB4C /* Frameworks */,
 			);
 			path = DataSourcableTests;
+			sourceTree = "<group>";
+		};
+		B3E89AA71BCCE09C00C0FB4C /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				B3E89AA31BCCE05100C0FB4C /* DataSourceType.swift */,
+				B3E89AA51BCCE05D00C0FB4C /* SectionType.swift */,
+				B3E89A9F1BCCDFF600C0FB4C /* EmptyCheckable.swift */,
+				B3E89AA11BCCE02E00C0FB4C /* Loadable.swift */,
+				B3E89AA81BCCE0D500C0FB4C /* Sectionable.swift */,
+				B3E89AAA1BCCE10F00C0FB4C /* TableViewDataSourcable.swift */,
+				B3E89AAC1BCCE16A00C0FB4C /* CollectionViewDataSourcable.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		B3E89AB21BCCEABD00C0FB4C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B3E89AB31BCCEAD300C0FB4C /* Quick.framework */,
+				B3E89AB51BCCED6B00C0FB4C /* Nimble.framework */,
+			);
+			name = Frameworks;
+			path = ../DataSourcable;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +192,7 @@
 				B3E89A891BCCDFBA00C0FB4C /* Sources */,
 				B3E89A8A1BCCDFBA00C0FB4C /* Frameworks */,
 				B3E89A8B1BCCDFBA00C0FB4C /* Resources */,
+				B3E89AB91BCCEDAB00C0FB4C /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -142,6 +210,7 @@
 		B3E89A7A1BCCDFB900C0FB4C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Zeker Waar";
 				TargetAttributes = {
@@ -183,16 +252,44 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3E89AB11BCCEA6A00C0FB4C /* Cartfile.private in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B3E89AB91BCCEDAB00C0FB4C /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Quick.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Nimble.framework",
+			);
+			name = Carthage;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B3E89A7E1BCCDFB900C0FB4C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3E89AA41BCCE05100C0FB4C /* DataSourceType.swift in Sources */,
+				B3E89AA61BCCE05D00C0FB4C /* SectionType.swift in Sources */,
+				B3E89AA91BCCE0D500C0FB4C /* Sectionable.swift in Sources */,
+				B3E89AAD1BCCE16A00C0FB4C /* CollectionViewDataSourcable.swift in Sources */,
+				B3E89AA21BCCE02E00C0FB4C /* Loadable.swift in Sources */,
+				B3E89AA01BCCDFF600C0FB4C /* EmptyCheckable.swift in Sources */,
+				B3E89AAB1BCCE10F00C0FB4C /* TableViewDataSourcable.swift in Sources */,
+				B3E89A9E1BCCDFD800C0FB4C /* State.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,7 +297,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3E89A931BCCDFBA00C0FB4C /* DataSourcableTests.swift in Sources */,
+				B3E89AAF1BCCE1E300C0FB4C /* LoadableSpec.swift in Sources */,
+				B397D7E91BCD7393007687CD /* DataSourceTypeSpec.swift in Sources */,
+				B33448D71BD00A0000CC9D93 /* TableViewDataSourcableSpec.swift in Sources */,
+				B34ADF0C1BCD7622007CE244 /* SectionTypeSpec.swift in Sources */,
+				B3AF7ECB1BD7E9A700EA4D88 /* CollectionViewDataSourcableSpec.swift in Sources */,
+				B397D7E71BCD7365007687CD /* SectionableSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +409,7 @@
 		B3E89A981BCCDFBA00C0FB4C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -317,12 +420,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = nl.zekerwaar.DataSourcable;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		B3E89A991BCCDFBA00C0FB4C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -339,6 +444,10 @@
 		B3E89A9B1BCCDFBA00C0FB4C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = DataSourcableTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nl.zekerwaar.DataSourcableTests;
@@ -349,6 +458,10 @@
 		B3E89A9C1BCCDFBA00C0FB4C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = DataSourcableTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nl.zekerwaar.DataSourcableTests;
@@ -375,6 +488,7 @@
 				B3E89A991BCCDFBA00C0FB4C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B3E89A9A1BCCDFBA00C0FB4C /* Build configuration list for PBXNativeTarget "DataSourcableTests" */ = {
 			isa = XCConfigurationList;
@@ -383,6 +497,7 @@
 				B3E89A9C1BCCDFBA00C0FB4C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
