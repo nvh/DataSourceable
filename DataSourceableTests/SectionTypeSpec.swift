@@ -10,25 +10,26 @@ import DataSourceable
 import Quick
 import Nimble
 
-struct Section: StaticSectionType {
+struct Section: SectionType {
     typealias Data = [Int]
-    typealias Index = Data.Index
+    typealias Index = Int
     typealias _Element = Data.Index
-    let staticData: Data
+    let data: Data?
 }
 
 class SectionTypeSpec: QuickSpec {
     override func spec() {
         describe("SectionType") {
-            let section =  Section(staticData: [0,0,7])
+            let data = [0,0,7]
+            let section =  Section(data: data)
             describe("should act as a dataSource") {
                 it("numberOfItems should return 0") {
-                    expect(section.numberOfItems).to(equal(section.staticData.count))
+                    expect(section.numberOfItems).to(equal(3))
                 }
                 
                 it("should return nil when requesting a item at index") {
-                    for index in section.startIndex..<section.endIndex {
-                        expect(section.item(atIndex: index)).to(equal(section[index]))
+                    for index in 0..<section.numberOfItems {
+                        expect(section.item(atIndex: index)).to(equal(data[index]))
                     }
                 }
             }

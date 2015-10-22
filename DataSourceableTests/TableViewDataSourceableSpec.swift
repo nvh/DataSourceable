@@ -11,11 +11,11 @@ import DataSourceable
 import Quick
 import Nimble
 
-struct TitledSection<D: Indexable where D.Index == Int>: StaticSectionType {
+struct TitledSection<D: Indexable where D.Index == Int>: SectionType {
     typealias Data = D
     typealias Index = D.Index
     typealias _Element = D._Element
-    var staticData: D
+    var data: D?
     var footerTitle: String?
 }
 
@@ -37,7 +37,7 @@ extension SimpleTableViewDataSource: SectionCreating {
 
 struct CustomSectionTableViewDataSource: TestTableViewSourceable {
     typealias Section = TitledSection<[Int]>
-    var sections: [Section]? = [TitledSection(staticData: [42], footerTitle: "footer text")]
+    var sections: [Section]? = [TitledSection(data: [42], footerTitle: "footer text")]
 }
 
 
@@ -141,7 +141,7 @@ class TableViewDataSourceableSpec: QuickSpec {
                             for row in 0..<proxy.tableView(tableView, numberOfRowsInSection: section) {
                                 let indexPath = NSIndexPath(forRow: row, inSection: section)
                                 let cell = proxy.tableView(tableView, cellForRowAtIndexPath:indexPath)
-                                expect(cell.textLabel?.text).to(equal("\(proxy.dataSource.sections![section][row])"))
+                                expect(cell.textLabel?.text).to(equal("\(proxy.dataSource.sections!.item(atIndex: section)!.item(atIndex:row)!)"))
                             }
                         }
                     }
