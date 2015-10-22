@@ -28,7 +28,7 @@ public extension TableViewDataSourceable where ItemType == Section.Data._Element
             return tableView.dequeueReusableCellWithIdentifier(identifier)!
         }
         let cell = tableView.dequeueReusableCellWithIdentifier(identifier, forIndexPath: indexPath)
-        configure(cell: cell, forItem: itemAtIndexPath as ItemType, inTableView: tableView)
+        configure(cell: cell, forItem: itemAtIndexPath, inTableView: tableView)
         return cell
     }
 
