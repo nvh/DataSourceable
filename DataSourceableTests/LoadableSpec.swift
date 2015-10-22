@@ -1,12 +1,12 @@
 //
 //  LoadableDataSourceTests.swift
-//  DataSourcable
+//  DataSourceable
 //
 //  Created by Niels van Hoorn on 13/10/15.
 //  Copyright © 2015 Zeker Waar. All rights reserved.
 //
 
-import DataSourcable
+import DataSourceable
 import Quick
 import Nimble
 

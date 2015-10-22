@@ -1,17 +1,17 @@
 //
-//  CollectionViewDataSourcableSpec.swift
-//  DataSourcable
+//  CollectionViewDataSourceableSpec.swift
+//  DataSourceable
 //
 //  Created by Niels van Hoorn on 21/10/15.
 //  Copyright © 2015 Zeker Waar. All rights reserved.
 //
 
 import UIKit
-import DataSourcable
+import DataSourceable
 import Quick
 import Nimble
 
-struct SimpleCollectionViewDataSource: CollectionViewDataSourcable {
+struct SimpleCollectionViewDataSource: CollectionViewDataSourceable {
     typealias ItemType = UIColor
     var sections: [[UIColor]]? = [[UIColor.redColor(),UIColor.blueColor(),UIColor.greenColor()],[UIColor.blackColor(),UIColor.whiteColor()],[UIColor.yellowColor(),UIColor.purpleColor(),UIColor.orangeColor(),UIColor.magentaColor()]]
 
@@ -26,9 +26,9 @@ struct SimpleCollectionViewDataSource: CollectionViewDataSourcable {
 }
 
 
-class CollectionViewDataSourcableSpec: QuickSpec {
+class CollectionViewDataSourceableSpec: QuickSpec {
     override func spec() {
-        describe("CollectionViewDataSourcable") {
+        describe("CollectionViewDataSourceable") {
             let collectionView = UICollectionView(frame: CGRectZero, collectionViewLayout: UICollectionViewFlowLayout())
             collectionView.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: "identifier")
             context("with a simple tableview data source") {

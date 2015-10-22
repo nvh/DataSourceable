@@ -1,6 +1,6 @@
 //
 //  TableViewDataSource.swift
-//  DataSourcable
+//  DataSourceable
 //
 //  Created by Niels van Hoorn on 13/10/15.
 //  Copyright © 2015 Zeker Waar. All rights reserved.
@@ -12,12 +12,12 @@ public protocol TableViewCellProviding {
     func configure(cell cell: UITableViewCell, forItem item: ItemType, inTableView tableView: UITableView) -> UITableViewCell
 }
 
-public protocol TableViewDataSourcable: Sectionable, TableViewCellProviding {
+public protocol TableViewDataSourceable: Sectionable, TableViewCellProviding {
     func tableView(tableView: UITableView, titleForHeaderInSection sectionIndex: Int) -> String?
     func tableView(tableView: UITableView, titleForFooterInSection sectionIndex: Int) -> String?
 }
 
-public extension TableViewDataSourcable where ItemType == Section.Data._Element, Section.Data.Index == Int {
+public extension TableViewDataSourceable where ItemType == Section.Data._Element, Section.Data.Index == Int {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return numberOfItems(inSection: section)
     }
@@ -47,7 +47,7 @@ public extension TableViewDataSourcable where ItemType == Section.Data._Element,
 
 
 //This could just be a protocol extension if UITableViewDatasSource wouldn't enforce @objc
-public class TableViewDataSourceProxy<D: TableViewDataSourcable where D.ItemType == D.Section.Data._Element, D.Section.Data.Index == Int>: NSObject, UITableViewDataSource {
+public class TableViewDataSourceProxy<D: TableViewDataSourceable where D.ItemType == D.Section.Data._Element, D.Section.Data.Index == Int>: NSObject, UITableViewDataSource {
     public var dataSource: D
     
     public init(dataSource: D) {

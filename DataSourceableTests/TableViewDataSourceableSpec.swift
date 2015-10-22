@@ -1,13 +1,13 @@
 //
-//  TableViewDataSourcableSpec.swift
-//  DataSourcable
+//  TableViewDataSourceableSpec.swift
+//  DataSourceable
 //
 //  Created by Niels van Hoorn on 15/10/15.
 //  Copyright © 2015 Zeker Waar. All rights reserved.
 //
 
 import UIKit
-import DataSourcable
+import DataSourceable
 import Quick
 import Nimble
 
@@ -19,7 +19,7 @@ struct TitledSection<D: Indexable where D.Index == Int>: StaticSectionType {
     var footerTitle: String?
 }
 
-struct SimpleTableViewDataSource: TestTableViewSourcable {
+struct SimpleTableViewDataSource: TestTableViewSourceable {
     var data: [String:[Int]]? = ["b":[2,4,8],"a":[1,1,2,3],"c":[3,6,9]]
 
     func tableView(tableView: UITableView, titleForHeaderInSection sectionIndex: Int) -> String? {
@@ -35,14 +35,14 @@ extension SimpleTableViewDataSource: SectionCreating {
     
 }
 
-struct CustomSectionTableViewDataSource: TestTableViewSourcable {
+struct CustomSectionTableViewDataSource: TestTableViewSourceable {
     typealias Section = TitledSection<[Int]>
     var sections: [Section]? = [TitledSection(staticData: [42], footerTitle: "footer text")]
 }
 
 
-protocol TestTableViewSourcable: TableViewDataSourcable {}
-extension TestTableViewSourcable {
+protocol TestTableViewSourceable: TableViewDataSourceable {}
+extension TestTableViewSourceable {
     func reuseIdentifier(forIndexPath indexPath: NSIndexPath) -> String {
         return "identifier"
     }
@@ -53,9 +53,9 @@ extension TestTableViewSourcable {
     }
 }
 
-class TableViewDataSourcableSpec: QuickSpec {
+class TableViewDataSourceableSpec: QuickSpec {
     override func spec() {
-        describe("TableViewDataSourcable") {
+        describe("TableViewDataSourceable") {
             let tableView = UITableView(frame: CGRect(x: 0, y: 0, width: 100, height: 100), style: .Plain)
             tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "identifier")
             context("with a simple tableview data source") {
