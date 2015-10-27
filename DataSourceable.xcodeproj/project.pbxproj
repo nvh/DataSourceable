@@ -7,25 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B33448D71BD00A0000CC9D93 /* TableViewDataSourceableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33448D61BD00A0000CC9D93 /* TableViewDataSourceableSpec.swift */; settings = {ASSET_TAGS = (); }; };
-		B34ADF0C1BCD7622007CE244 /* SectionTypeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34ADF0B1BCD7622007CE244 /* SectionTypeSpec.swift */; settings = {ASSET_TAGS = (); }; };
-		B397D7E71BCD7365007687CD /* SectionableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B397D7E61BCD7365007687CD /* SectionableSpec.swift */; settings = {ASSET_TAGS = (); }; };
-		B397D7E91BCD7393007687CD /* DataSourceTypeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B397D7E81BCD7393007687CD /* DataSourceTypeSpec.swift */; settings = {ASSET_TAGS = (); }; };
-		B3AF7ECB1BD7E9A700EA4D88 /* CollectionViewDataSourceableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AF7ECA1BD7E9A700EA4D88 /* CollectionViewDataSourceableSpec.swift */; settings = {ASSET_TAGS = (); }; };
+		B33448D71BD00A0000CC9D93 /* TableViewDataSourceableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33448D61BD00A0000CC9D93 /* TableViewDataSourceableSpec.swift */; };
+		B34ADF0C1BCD7622007CE244 /* SectionTypeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34ADF0B1BCD7622007CE244 /* SectionTypeSpec.swift */; };
+		B397D7E71BCD7365007687CD /* SectionableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B397D7E61BCD7365007687CD /* SectionableSpec.swift */; };
+		B397D7E91BCD7393007687CD /* DataSourceTypeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B397D7E81BCD7393007687CD /* DataSourceTypeSpec.swift */; };
+		B3AF7ECB1BD7E9A700EA4D88 /* CollectionViewDataSourceableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AF7ECA1BD7E9A700EA4D88 /* CollectionViewDataSourceableSpec.swift */; };
+		B3CC84F11BD8C8160099CE3B /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CC84F01BD8C8160099CE3B /* UITableView.swift */; };
 		B3E89A871BCCDFB900C0FB4C /* DataSourceable.h in Headers */ = {isa = PBXBuildFile; fileRef = B3E89A861BCCDFB900C0FB4C /* DataSourceable.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B3E89A8E1BCCDFBA00C0FB4C /* DataSourceable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E89A831BCCDFB900C0FB4C /* DataSourceable.framework */; settings = {ASSET_TAGS = (); }; };
-		B3E89A9E1BCCDFD800C0FB4C /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E89A9D1BCCDFD800C0FB4C /* State.swift */; settings = {ASSET_TAGS = (); }; };
-		B3E89AA01BCCDFF600C0FB4C /* EmptyCheckable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E89A9F1BCCDFF600C0FB4C /* EmptyCheckable.swift */; settings = {ASSET_TAGS = (); }; };
-		B3E89AA21BCCE02E00C0FB4C /* Loadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E89AA11BCCE02E00C0FB4C /* Loadable.swift */; settings = {ASSET_TAGS = (); }; };
-		B3E89AA41BCCE05100C0FB4C /* DataSourceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E89AA31BCCE05100C0FB4C /* DataSourceType.swift */; settings = {ASSET_TAGS = (); }; };
-		B3E89AA61BCCE05D00C0FB4C /* SectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E89AA51BCCE05D00C0FB4C /* SectionType.swift */; settings = {ASSET_TAGS = (); }; };
-		B3E89AA91BCCE0D500C0FB4C /* Sectionable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E89AA81BCCE0D500C0FB4C /* Sectionable.swift */; settings = {ASSET_TAGS = (); }; };
-		B3E89AAB1BCCE10F00C0FB4C /* TableViewDataSourceable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E89AAA1BCCE10F00C0FB4C /* TableViewDataSourceable.swift */; settings = {ASSET_TAGS = (); }; };
-		B3E89AAD1BCCE16A00C0FB4C /* CollectionViewDataSourceable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E89AAC1BCCE16A00C0FB4C /* CollectionViewDataSourceable.swift */; settings = {ASSET_TAGS = (); }; };
-		B3E89AAF1BCCE1E300C0FB4C /* LoadableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E89AAE1BCCE1E300C0FB4C /* LoadableSpec.swift */; settings = {ASSET_TAGS = (); }; };
-		B3E89AB11BCCEA6A00C0FB4C /* Cartfile.private in Resources */ = {isa = PBXBuildFile; fileRef = B3E89AB01BCCEA6A00C0FB4C /* Cartfile.private */; settings = {ASSET_TAGS = (); }; };
-		B3E89AB41BCCEAD300C0FB4C /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E89AB31BCCEAD300C0FB4C /* Quick.framework */; settings = {ASSET_TAGS = (); }; };
-		B3E89AB61BCCED6B00C0FB4C /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E89AB51BCCED6B00C0FB4C /* Nimble.framework */; settings = {ASSET_TAGS = (); }; };
+		B3E89A8E1BCCDFBA00C0FB4C /* DataSourceable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E89A831BCCDFB900C0FB4C /* DataSourceable.framework */; };
+		B3E89A9E1BCCDFD800C0FB4C /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E89A9D1BCCDFD800C0FB4C /* State.swift */; };
+		B3E89AA01BCCDFF600C0FB4C /* EmptyCheckable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E89A9F1BCCDFF600C0FB4C /* EmptyCheckable.swift */; };
+		B3E89AA21BCCE02E00C0FB4C /* Loadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E89AA11BCCE02E00C0FB4C /* Loadable.swift */; };
+		B3E89AA41BCCE05100C0FB4C /* DataSourceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E89AA31BCCE05100C0FB4C /* DataSourceType.swift */; };
+		B3E89AA61BCCE05D00C0FB4C /* SectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E89AA51BCCE05D00C0FB4C /* SectionType.swift */; };
+		B3E89AA91BCCE0D500C0FB4C /* Sectionable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E89AA81BCCE0D500C0FB4C /* Sectionable.swift */; };
+		B3E89AAB1BCCE10F00C0FB4C /* TableViewDataSourceable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E89AAA1BCCE10F00C0FB4C /* TableViewDataSourceable.swift */; };
+		B3E89AAD1BCCE16A00C0FB4C /* CollectionViewDataSourceable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E89AAC1BCCE16A00C0FB4C /* CollectionViewDataSourceable.swift */; };
+		B3E89AAF1BCCE1E300C0FB4C /* LoadableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E89AAE1BCCE1E300C0FB4C /* LoadableSpec.swift */; };
+		B3E89AB41BCCEAD300C0FB4C /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E89AB31BCCEAD300C0FB4C /* Quick.framework */; };
+		B3E89AB61BCCED6B00C0FB4C /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E89AB51BCCED6B00C0FB4C /* Nimble.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,9 +41,12 @@
 /* Begin PBXFileReference section */
 		B33448D61BD00A0000CC9D93 /* TableViewDataSourceableSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewDataSourceableSpec.swift; sourceTree = "<group>"; };
 		B34ADF0B1BCD7622007CE244 /* SectionTypeSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionTypeSpec.swift; sourceTree = "<group>"; };
+		B362D0E01BDFEFE700BE12DE /* README.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = README.playground; sourceTree = "<group>"; };
 		B397D7E61BCD7365007687CD /* SectionableSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionableSpec.swift; sourceTree = "<group>"; };
 		B397D7E81BCD7393007687CD /* DataSourceTypeSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataSourceTypeSpec.swift; path = DataSourceableTests/DataSourceTypeSpec.swift; sourceTree = SOURCE_ROOT; };
 		B3AF7ECA1BD7E9A700EA4D88 /* CollectionViewDataSourceableSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewDataSourceableSpec.swift; sourceTree = "<group>"; };
+		B3CC84EF1BD8C4F40099CE3B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		B3CC84F01BD8C8160099CE3B /* UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 		B3E89A831BCCDFB900C0FB4C /* DataSourceable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DataSourceable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3E89A861BCCDFB900C0FB4C /* DataSourceable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataSourceable.h; sourceTree = "<group>"; };
 		B3E89A881BCCDFBA00C0FB4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -87,6 +90,8 @@
 		B3E89A791BCCDFB900C0FB4C = {
 			isa = PBXGroup;
 			children = (
+				B362D0E01BDFEFE700BE12DE /* README.playground */,
+				B3CC84EF1BD8C4F40099CE3B /* README.md */,
 				B3E89AB01BCCEA6A00C0FB4C /* Cartfile.private */,
 				B3E89A851BCCDFB900C0FB4C /* DataSourceable */,
 				B3E89A911BCCDFBA00C0FB4C /* DataSourceableTests */,
@@ -110,8 +115,8 @@
 				B3E89AA71BCCE09C00C0FB4C /* Protocols */,
 				B3E89A861BCCDFB900C0FB4C /* DataSourceable.h */,
 				B3E89A881BCCDFBA00C0FB4C /* Info.plist */,
+				B3CC84F01BD8C8160099CE3B /* UITableView.swift */,
 			);
-			name = DataSourceable;
 			path = DataSourceable;
 			sourceTree = "<group>";
 		};
@@ -127,7 +132,6 @@
 				B3AF7ECA1BD7E9A700EA4D88 /* CollectionViewDataSourceableSpec.swift */,
 				B3E89AB21BCCEABD00C0FB4C /* Frameworks */,
 			);
-			name = DataSourceableTests;
 			path = DataSourceableTests;
 			sourceTree = "<group>";
 		};
@@ -254,7 +258,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3E89AB11BCCEA6A00C0FB4C /* Cartfile.private in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +292,7 @@
 				B3E89AA91BCCE0D500C0FB4C /* Sectionable.swift in Sources */,
 				B3E89AAD1BCCE16A00C0FB4C /* CollectionViewDataSourceable.swift in Sources */,
 				B3E89AA21BCCE02E00C0FB4C /* Loadable.swift in Sources */,
+				B3CC84F11BD8C8160099CE3B /* UITableView.swift in Sources */,
 				B3E89AA01BCCDFF600C0FB4C /* EmptyCheckable.swift in Sources */,
 				B3E89AAB1BCCE10F00C0FB4C /* TableViewDataSourceable.swift in Sources */,
 				B3E89A9E1BCCDFD800C0FB4C /* State.swift in Sources */,
