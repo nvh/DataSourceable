@@ -27,6 +27,7 @@ public enum State<D : EmptyCheckable,E> {
             return .Error(error,oldData)
         default:
             assert(false, "Invalid state transition to .Error from other than .Loading")
+            return self
         }
     }
     
@@ -40,6 +41,7 @@ public enum State<D : EmptyCheckable,E> {
             }
         default:
             assert(false, "Invalid state transition to .Ready from other than .Loading")
+            return self
         }
     }
     
