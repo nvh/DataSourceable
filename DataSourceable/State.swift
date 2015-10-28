@@ -12,7 +12,7 @@ public enum State<D : EmptyCheckable,E> {
     case Ready(D)
     case Error(E,D?)
     
-    func toLoading() -> State {
+    public func toLoading() -> State {
         switch self {
         case .Ready(let oldData):
             return .Loading(oldData)
@@ -21,7 +21,7 @@ public enum State<D : EmptyCheckable,E> {
         }
     }
     
-    func toError(error:E) -> State {
+    public func toError(error:E) -> State {
         switch self {
         case .Loading(let oldData):
             return .Error(error,oldData)
@@ -31,7 +31,7 @@ public enum State<D : EmptyCheckable,E> {
         }
     }
     
-    func toReady(data: D) -> State {
+    public func toReady(data: D) -> State {
         switch self {
         case .Loading:
             if data.isEmpty {
@@ -45,7 +45,7 @@ public enum State<D : EmptyCheckable,E> {
         }
     }
     
-    var data: D? {
+    public var data: D? {
         switch self {
         case .Empty:
             return nil
@@ -58,7 +58,7 @@ public enum State<D : EmptyCheckable,E> {
         }
     }
     
-    var error: E? {
+    public var error: E? {
         switch self {
         case .Error(let error, _):
             return error
