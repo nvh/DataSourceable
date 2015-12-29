@@ -14,12 +14,10 @@
 		B3578A391C32B9DC00D1E340 /* TableViewDataSourceProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3578A381C32B9DC00D1E340 /* TableViewDataSourceProxy.swift */; };
 		B3578A3B1C32BE6A00D1E340 /* CollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3578A3A1C32BE6A00D1E340 /* CollectionViewDataSource.swift */; };
 		B3578A3D1C32C0E900D1E340 /* CollectionViewDataSourceProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3578A3C1C32C0E900D1E340 /* CollectionViewDataSourceProxy.swift */; };
-		B3578A3F1C32C4ED00D1E340 /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3578A3E1C32C4ED00D1E340 /* UICollectionView.swift */; };
 		B3578A421C32C65A00D1E340 /* ElementsContaining.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3578A411C32C65A00D1E340 /* ElementsContaining.swift */; };
 		B397D7E71BCD7365007687CD /* SectionableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B397D7E61BCD7365007687CD /* SectionableSpec.swift */; };
 		B397D7E91BCD7393007687CD /* DataSourceTypeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B397D7E81BCD7393007687CD /* DataSourceTypeSpec.swift */; };
 		B3AF7ECB1BD7E9A700EA4D88 /* CollectionViewDataSourceableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AF7ECA1BD7E9A700EA4D88 /* CollectionViewDataSourceableSpec.swift */; };
-		B3CC84F11BD8C8160099CE3B /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CC84F01BD8C8160099CE3B /* UITableView.swift */; };
 		B3E89A871BCCDFB900C0FB4C /* DataSourceable.h in Headers */ = {isa = PBXBuildFile; fileRef = B3E89A861BCCDFB900C0FB4C /* DataSourceable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B3E89A8E1BCCDFBA00C0FB4C /* DataSourceable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E89A831BCCDFB900C0FB4C /* DataSourceable.framework */; };
 		B3E89A9E1BCCDFD800C0FB4C /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E89A9D1BCCDFD800C0FB4C /* State.swift */; };
@@ -53,14 +51,12 @@
 		B3578A381C32B9DC00D1E340 /* TableViewDataSourceProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewDataSourceProxy.swift; sourceTree = "<group>"; };
 		B3578A3A1C32BE6A00D1E340 /* CollectionViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewDataSource.swift; sourceTree = "<group>"; };
 		B3578A3C1C32C0E900D1E340 /* CollectionViewDataSourceProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewDataSourceProxy.swift; sourceTree = "<group>"; };
-		B3578A3E1C32C4ED00D1E340 /* UICollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
 		B3578A411C32C65A00D1E340 /* ElementsContaining.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElementsContaining.swift; sourceTree = "<group>"; };
 		B362D0E01BDFEFE700BE12DE /* README.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = README.playground; sourceTree = "<group>"; };
 		B397D7E61BCD7365007687CD /* SectionableSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionableSpec.swift; sourceTree = "<group>"; };
 		B397D7E81BCD7393007687CD /* DataSourceTypeSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataSourceTypeSpec.swift; path = DataSourceableTests/DataSourceTypeSpec.swift; sourceTree = SOURCE_ROOT; };
 		B3AF7ECA1BD7E9A700EA4D88 /* CollectionViewDataSourceableSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewDataSourceableSpec.swift; sourceTree = "<group>"; };
 		B3CC84EF1BD8C4F40099CE3B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		B3CC84F01BD8C8160099CE3B /* UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 		B3E89A831BCCDFB900C0FB4C /* DataSourceable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DataSourceable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3E89A861BCCDFB900C0FB4C /* DataSourceable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataSourceable.h; sourceTree = "<group>"; };
 		B3E89A881BCCDFBA00C0FB4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -110,15 +106,6 @@
 			name = Classes;
 			sourceTree = "<group>";
 		};
-		B3578A401C32C56400D1E340 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				B3CC84F01BD8C8160099CE3B /* UITableView.swift */,
-				B3578A3E1C32C4ED00D1E340 /* UICollectionView.swift */,
-			);
-			name = Extensions;
-			sourceTree = "<group>";
-		};
 		B3E89A791BCCDFB900C0FB4C = {
 			isa = PBXGroup;
 			children = (
@@ -146,7 +133,6 @@
 				B3E89A9D1BCCDFD800C0FB4C /* State.swift */,
 				B3E89AA71BCCE09C00C0FB4C /* Protocols */,
 				B3578A371C32B9C600D1E340 /* Classes */,
-				B3578A401C32C56400D1E340 /* Extensions */,
 				B3E89A861BCCDFB900C0FB4C /* DataSourceable.h */,
 				B3E89A881BCCDFBA00C0FB4C /* Info.plist */,
 			);
@@ -324,14 +310,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3578A3F1C32C4ED00D1E340 /* UICollectionView.swift in Sources */,
 				B3E89AA41BCCE05100C0FB4C /* DataContaining.swift in Sources */,
 				B3578A391C32B9DC00D1E340 /* TableViewDataSourceProxy.swift in Sources */,
 				B3E89AA61BCCE05D00C0FB4C /* SectionType.swift in Sources */,
 				B3E89AA91BCCE0D500C0FB4C /* Sectionable.swift in Sources */,
 				B3E89AAD1BCCE16A00C0FB4C /* CollectionViewDataSourceable.swift in Sources */,
 				B3E89AA21BCCE02E00C0FB4C /* Loadable.swift in Sources */,
-				B3CC84F11BD8C8160099CE3B /* UITableView.swift in Sources */,
 				B3578A341C32B92A00D1E340 /* TableViewDataSource.swift in Sources */,
 				B3578A3D1C32C0E900D1E340 /* CollectionViewDataSourceProxy.swift in Sources */,
 				B3578A421C32C65A00D1E340 /* ElementsContaining.swift in Sources */,
