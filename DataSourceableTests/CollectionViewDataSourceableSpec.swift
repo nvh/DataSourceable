@@ -19,7 +19,7 @@ struct SimpleCollectionViewDataSource: CollectionViewDataSourceable {
         return "identifier"
     }
     
-    func configure(cell cell: UICollectionViewCell, forItem item: ItemType, inCollectionView collectionView: UICollectionView) -> UICollectionViewCell {
+    func configure(cell cell: UICollectionViewCell, forItem item: ItemType, inView view: UICollectionView) -> UICollectionViewCell {
         cell.contentView.backgroundColor = item
         return cell
     }
