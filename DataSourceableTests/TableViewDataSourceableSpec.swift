@@ -58,9 +58,10 @@ class TableViewDataSourceableSpec: QuickSpec {
             let tableView = UITableView(frame: CGRect(x: 0, y: 0, width: 100, height: 100), style: .Plain)
             tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "identifier")
             context("with a simple tableview data source") {
-                var proxy: TableViewDataSourceProxy<SimpleTableViewDataSource>! = nil
+                let simpleDataSource = SimpleTableViewDataSource()
+                var proxy: TableViewDataSourceProxy! = nil
                 beforeEach {
-                    proxy = TableViewDataSourceProxy(dataSource: SimpleTableViewDataSource())
+                    proxy = TableViewDataSourceProxy(dataSource: simpleDataSource)
                     tableView.dataSource = proxy
                 }
                 describe("tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int") {
@@ -97,7 +98,7 @@ class TableViewDataSourceableSpec: QuickSpec {
                             for row in 0..<proxy.tableView(tableView, numberOfRowsInSection: section) {
                                 let indexPath = NSIndexPath(forRow: row, inSection: section)
                                 let cell = proxy.tableView(tableView, cellForRowAtIndexPath:indexPath)
-                                expect(cell.textLabel?.text).to(equal("\(proxy.dataSource.sections![section][row])"))
+                                expect(cell.textLabel?.text).to(equal("\(simpleDataSource.sections![section][row])"))
                             }
                         }
                     }
@@ -109,6 +110,7 @@ class TableViewDataSourceableSpec: QuickSpec {
                 }
             }
             context("with a custom section tableview data source") {
+                let customDataSource = CustomSectionTableViewDataSource()
                 let proxy = TableViewDataSourceProxy(dataSource: CustomSectionTableViewDataSource())
                 tableView.dataSource = proxy
                 describe("tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int") {
@@ -140,7 +142,7 @@ class TableViewDataSourceableSpec: QuickSpec {
                             for row in 0..<proxy.tableView(tableView, numberOfRowsInSection: section) {
                                 let indexPath = NSIndexPath(forRow: row, inSection: section)
                                 let cell = proxy.tableView(tableView, cellForRowAtIndexPath:indexPath)
-                                expect(cell.textLabel?.text).to(equal("\(proxy.dataSource.sections!.item(atIndex: section)!.item(atIndex:row)!)"))
+                                expect(cell.textLabel?.text).to(equal("\(customDataSource.sections!.item(atIndex: section)!.item(atIndex:row)!)"))
                             }
                         }
                     }

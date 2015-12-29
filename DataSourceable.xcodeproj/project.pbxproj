@@ -10,7 +10,9 @@
 		B33448D71BD00A0000CC9D93 /* TableViewDataSourceableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33448D61BD00A0000CC9D93 /* TableViewDataSourceableSpec.swift */; };
 		B34ADF0C1BCD7622007CE244 /* SectionTypeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34ADF0B1BCD7622007CE244 /* SectionTypeSpec.swift */; };
 		B3578A341C32B92A00D1E340 /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3578A331C32B92A00D1E340 /* TableViewDataSource.swift */; };
+		B3578A391C32B9DC00D1E340 /* TableViewDataSourceProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3578A381C32B9DC00D1E340 /* TableViewDataSourceProxy.swift */; };
 		B3578A3B1C32BE6A00D1E340 /* CollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3578A3A1C32BE6A00D1E340 /* CollectionViewDataSource.swift */; };
+		B3578A3D1C32C0E900D1E340 /* CollectionViewDataSourceProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3578A3C1C32C0E900D1E340 /* CollectionViewDataSourceProxy.swift */; };
 		B3578A421C32C65A00D1E340 /* ElementsContaining.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3578A411C32C65A00D1E340 /* ElementsContaining.swift */; };
 		B397D7E71BCD7365007687CD /* SectionableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B397D7E61BCD7365007687CD /* SectionableSpec.swift */; };
 		B397D7E91BCD7393007687CD /* DataSourceTypeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B397D7E81BCD7393007687CD /* DataSourceTypeSpec.swift */; };
@@ -45,7 +47,9 @@
 		B33448D61BD00A0000CC9D93 /* TableViewDataSourceableSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewDataSourceableSpec.swift; sourceTree = "<group>"; };
 		B34ADF0B1BCD7622007CE244 /* SectionTypeSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionTypeSpec.swift; sourceTree = "<group>"; };
 		B3578A331C32B92A00D1E340 /* TableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
+		B3578A381C32B9DC00D1E340 /* TableViewDataSourceProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewDataSourceProxy.swift; sourceTree = "<group>"; };
 		B3578A3A1C32BE6A00D1E340 /* CollectionViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewDataSource.swift; sourceTree = "<group>"; };
+		B3578A3C1C32C0E900D1E340 /* CollectionViewDataSourceProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewDataSourceProxy.swift; sourceTree = "<group>"; };
 		B3578A411C32C65A00D1E340 /* ElementsContaining.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElementsContaining.swift; sourceTree = "<group>"; };
 		B362D0E01BDFEFE700BE12DE /* README.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = README.playground; sourceTree = "<group>"; };
 		B397D7E61BCD7365007687CD /* SectionableSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionableSpec.swift; sourceTree = "<group>"; };
@@ -297,12 +301,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3E89AA41BCCE05100C0FB4C /* DataContaining.swift in Sources */,
+				B3578A391C32B9DC00D1E340 /* TableViewDataSourceProxy.swift in Sources */,
 				B3E89AA61BCCE05D00C0FB4C /* SectionType.swift in Sources */,
 				B3E89AA91BCCE0D500C0FB4C /* Sectionable.swift in Sources */,
 				B3E89AAD1BCCE16A00C0FB4C /* CollectionViewDataSourceable.swift in Sources */,
 				B3E89AA21BCCE02E00C0FB4C /* Loadable.swift in Sources */,
 				B3CC84F11BD8C8160099CE3B /* UITableView.swift in Sources */,
 				B3578A341C32B92A00D1E340 /* TableViewDataSource.swift in Sources */,
+				B3578A3D1C32C0E900D1E340 /* CollectionViewDataSourceProxy.swift in Sources */,
 				B3578A421C32C65A00D1E340 /* ElementsContaining.swift in Sources */,
 				B3578A3B1C32BE6A00D1E340 /* CollectionViewDataSource.swift in Sources */,
 				B3E89AA01BCCDFF600C0FB4C /* EmptyCheckable.swift in Sources */,

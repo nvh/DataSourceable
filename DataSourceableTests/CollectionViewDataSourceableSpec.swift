@@ -32,9 +32,10 @@ class CollectionViewDataSourceableSpec: QuickSpec {
             let collectionView = UICollectionView(frame: CGRectZero, collectionViewLayout: UICollectionViewFlowLayout())
             collectionView.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: "identifier")
             context("with a simple tableview data source") {
-                var proxy: CollectionViewDataSourceProxy<SimpleCollectionViewDataSource>! = nil
+                let simpleDataSource = SimpleCollectionViewDataSource()
+                var proxy: CollectionViewDataSourceProxy! = nil
                 beforeEach {
-                    proxy = CollectionViewDataSourceProxy(dataSource: SimpleCollectionViewDataSource())
+                    proxy = CollectionViewDataSourceProxy(dataSource: simpleDataSource)
                     collectionView.dataSource = proxy
                 }
                 describe("collectionView(collectionView: UICollectionView, numberOfRowsInSection section: Int) -> Int") {
@@ -54,7 +55,7 @@ class CollectionViewDataSourceableSpec: QuickSpec {
                             for row in 0..<proxy.collectionView(collectionView, numberOfItemsInSection: section) {
                                 let indexPath = NSIndexPath(forRow: row, inSection: section)
                                 let cell = proxy.collectionView(collectionView, cellForItemAtIndexPath:indexPath)
-                                expect(cell.contentView.backgroundColor).to(equal(proxy.dataSource.sections![section][row]))
+                                expect(cell.contentView.backgroundColor).to(equal(simpleDataSource.sections![section][row]))
                             }
                         }
                     }
