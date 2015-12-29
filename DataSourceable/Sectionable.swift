@@ -32,10 +32,8 @@ public extension Sectionable {
     func numberOfItems(inSection sectionIndex: Int) -> Int {
         return section(atIndex: sectionIndex)?.numberOfItems ?? 0
     }
-}
 
-public extension Sectionable where Section.Data.Index == Int {
-    func item(atIndexPath indexPath: NSIndexPath) -> Section.Data._Element? {
+    func item(atIndexPath indexPath: NSIndexPath) -> Section.Data.Element? {
         return section(atIndex: indexPath.section)?.item(atIndex: indexPath.row)
     }
 }
@@ -46,13 +44,13 @@ public extension Sectionable where Self : SectionCreating {
     }
 }
 
-public extension Sectionable where Self : DataSourceType, Section == Self.Data {
+public extension Sectionable where Self : DataContaining, Section == Self.Data {
     var sections: [Section]? {
         return data.map { [$0] }
     }
 }
 
-public extension Sectionable where Self : DataSourceType, Self.Data == [Section] {
+public extension Sectionable where Self : DataContaining, Self.Data == [Section] {
     var sections: [Section]? {
         return data
     }

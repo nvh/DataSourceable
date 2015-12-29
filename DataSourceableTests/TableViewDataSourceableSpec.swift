@@ -11,10 +11,9 @@ import DataSourceable
 import Quick
 import Nimble
 
-struct TitledSection<D: Indexable where D.Index == Int>: SectionType {
+struct TitledSection<D: ElementsContaining>: SectionType {
     typealias Data = D
-    typealias Index = D.Index
-    typealias _Element = D._Element
+    typealias Element = D.Element
     var data: D?
     var footerTitle: String?
 }
@@ -47,7 +46,7 @@ extension TestTableViewSourceable {
         return "identifier"
     }
     
-    func configure(cell cell: UITableViewCell, forItem item: Section.Data._Element, inTableView tableView: UITableView) -> UITableViewCell {
+    func configure(cell cell: UITableViewCell, forItem item: Section.Data.Element, inView view: UITableView) -> UITableViewCell {
         cell.textLabel?.text = "\(item)"
         return cell
     }

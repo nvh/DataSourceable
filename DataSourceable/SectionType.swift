@@ -6,7 +6,7 @@
 //  Copyright © 2015 Zeker Waar. All rights reserved.
 //
 
-public protocol SectionType: DataSourceType {
+public protocol SectionType: DataContaining {
     var headerTitle: String? { get }
     var footerTitle: String? { get }
 }

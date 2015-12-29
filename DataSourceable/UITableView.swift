@@ -6,11 +6,9 @@
 //  Copyright © 2015 Zeker Waar. All rights reserved.
 //
 
-import Foundation
-
 extension UITableView {
-    func setDataSourceable<D: TableViewDataSourceable where D.ItemType == D.Section.Data._Element, D.Section.Data.Index == Int> (dataSourceable: D) {
-        self.dataSource = TableViewDataSourceProxy(dataSource: dataSourceable)
+    func setDataSource(dataSource: TableViewDataSource) {
+        self.dataSource = TableViewDataSourceProxy(dataSource: dataSource)
     }
 
 }
