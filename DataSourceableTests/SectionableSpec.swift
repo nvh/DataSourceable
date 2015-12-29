@@ -10,14 +10,14 @@ import DataSourceable
 import Quick
 import Nimble
 
-struct SingleSectionDataSource: Sectionable, DataSourceType {
+struct SingleSectionDataSource: Sectionable, DataContaining {
     typealias Data =  [Int]
     typealias Section = Data
     var data: Data? = nil
 }
 
 
-struct SectionableDataSource: Sectionable, DataSourceType {
+struct SectionableDataSource: Sectionable, DataContaining {
     typealias Data =  [Section]
     typealias Section = [Int]
     var data: Data? = nil

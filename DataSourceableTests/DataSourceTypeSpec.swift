@@ -10,7 +10,7 @@ import DataSourceable
 import Quick
 import Nimble
 
-struct DataSource: DataSourceType {
+struct DataSource: DataContaining {
     var data: [Int]? = nil
 }
 
