@@ -6,4 +6,4 @@
 //  Copyright © 2015 Zeker Waar. All rights reserved.
 //
 
-public protocol CollectionViewDataSourceable: CollectionViewDataSource,Sectionable,CellProviding {}
+public protocol CollectionViewDataSourceable: CollectionViewDataSource,Sectionable,CollectionViewCellProviding {}

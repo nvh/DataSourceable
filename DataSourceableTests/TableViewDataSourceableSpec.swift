@@ -46,7 +46,7 @@ extension TestTableViewSourceable {
         return "identifier"
     }
     
-    func configure(cell cell: UITableViewCell, forItem item: Section.Data.Element, inView view: UITableView) -> UITableViewCell {
+    func configure(cell cell: UITableViewCell, forItem item: Int, inTableView view: UITableView) -> UITableViewCell {
         cell.textLabel?.text = "\(item)"
         return cell
     }
