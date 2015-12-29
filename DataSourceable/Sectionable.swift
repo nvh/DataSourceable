@@ -36,6 +36,14 @@ public extension Sectionable {
     func item(atIndexPath indexPath: NSIndexPath) -> Section.Data.Element? {
         return section(atIndex: indexPath.section)?.item(atIndex: indexPath.row)
     }
+    
+    func sectionHeader(atIndex index: Int) -> String? {
+        return section(atIndex: index)?.headerTitle
+    }
+
+    func sectionFooter(atIndex index: Int) -> String? {
+        return section(atIndex: index)?.footerTitle
+    }
 }
 
 public extension Sectionable where Self : SectionCreating {
