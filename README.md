@@ -29,3 +29,4 @@ let proxy = TableViewDataSourceProxy(dataSource: dataSource)
 tableView.dataSource = proxy
 ```
 
+See a working example in README.playground
