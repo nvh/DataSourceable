@@ -101,6 +101,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B3578A371C32B9C600D1E340 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				B3578A381C32B9DC00D1E340 /* TableViewDataSourceProxy.swift */,
+				B3578A3C1C32C0E900D1E340 /* CollectionViewDataSourceProxy.swift */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
 		B3578A401C32C56400D1E340 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +145,7 @@
 			children = (
 				B3E89A9D1BCCDFD800C0FB4C /* State.swift */,
 				B3E89AA71BCCE09C00C0FB4C /* Protocols */,
+				B3578A371C32B9C600D1E340 /* Classes */,
 				B3578A401C32C56400D1E340 /* Extensions */,
 				B3E89A861BCCDFB900C0FB4C /* DataSourceable.h */,
 				B3E89A881BCCDFBA00C0FB4C /* Info.plist */,
