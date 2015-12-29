@@ -59,19 +59,18 @@ class TableViewDataSourceableSpec: QuickSpec {
             tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "identifier")
             context("with a simple tableview data source") {
                 let simpleDataSource = SimpleTableViewDataSource()
-                var proxy: TableViewDataSourceProxy! = nil
+                let proxy = TableViewDataSourceProxy(dataSource: simpleDataSource)
                 beforeEach {
-                    proxy = TableViewDataSourceProxy(dataSource: simpleDataSource)
                     tableView.dataSource = proxy
                 }
                 describe("tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int") {
                     it("should return 0 rows for section 0") {
-                        expect(proxy.tableView(tableView, numberOfRowsInSection: 0)).to(equal(4))
+                        expect(tableView.dataSource!.tableView(tableView, numberOfRowsInSection: 0)).to(equal(4))
                     }
                 }
                 describe("numberOfSectionsInTableView") {
                     it("should return 0") {
-                        expect(proxy.numberOfSectionsInTableView(tableView)).to(equal(3))
+                        expect(tableView.dataSource!.numberOfSectionsInTableView!(tableView)).to(equal(3))
                     }
                 }
                 
@@ -79,7 +78,7 @@ class TableViewDataSourceableSpec: QuickSpec {
                     it("should override the default implementation") {
                         let titles = ["a","b","c"]
                         for index in 0..<3 {
-                            expect(proxy.tableView(tableView, titleForHeaderInSection: index)).to(equal(titles[index]))
+                            expect(tableView.dataSource!.tableView!(tableView, titleForHeaderInSection: index)).to(equal(titles[index]))
                         }
                     }
                 }
@@ -87,23 +86,23 @@ class TableViewDataSourceableSpec: QuickSpec {
                 describe("titleForFooterInSection") {
                     it("should use the default implementation") {
                         for index in 0..<3 {
-                            expect(proxy.tableView(tableView, titleForFooterInSection: index)).to(beNil())
+                            expect(tableView.dataSource!.tableView!(tableView, titleForFooterInSection: index)).to(beNil())
                         }
                     }
                 }
                 
                 describe("cellForRowAtIndexPath") {
                     it("should return the configured cell") {
-                        for section in 0..<proxy.numberOfSectionsInTableView(tableView) {
-                            for row in 0..<proxy.tableView(tableView, numberOfRowsInSection: section) {
+                        for section in 0..<tableView.dataSource!.numberOfSectionsInTableView!(tableView) {
+                            for row in 0..<tableView.dataSource!.tableView(tableView, numberOfRowsInSection: section) {
                                 let indexPath = NSIndexPath(forRow: row, inSection: section)
-                                let cell = proxy.tableView(tableView, cellForRowAtIndexPath:indexPath)
+                                let cell = tableView.dataSource!.tableView(tableView, cellForRowAtIndexPath:indexPath)
                                 expect(cell.textLabel?.text).to(equal("\(simpleDataSource.sections![section][row])"))
                             }
                         }
                     }
                     it("should return an unconfigured cell for a non-existing indexpath") {
-                        let cell = proxy.tableView(tableView, cellForRowAtIndexPath:(NSIndexPath(forRow: 6, inSection: 6)))
+                        let cell = tableView.dataSource!.tableView(tableView, cellForRowAtIndexPath:(NSIndexPath(forRow: 6, inSection: 6)))
                         expect(cell.textLabel?.text).to(beNil())
                     }
 

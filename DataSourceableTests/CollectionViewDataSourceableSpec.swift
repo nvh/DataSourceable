@@ -33,34 +33,33 @@ class CollectionViewDataSourceableSpec: QuickSpec {
             collectionView.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: "identifier")
             context("with a simple tableview data source") {
                 let simpleDataSource = SimpleCollectionViewDataSource()
-                var proxy: CollectionViewDataSourceProxy! = nil
+                let proxy = CollectionViewDataSourceProxy(dataSource: simpleDataSource)
                 beforeEach {
-                    proxy = CollectionViewDataSourceProxy(dataSource: simpleDataSource)
                     collectionView.dataSource = proxy
                 }
                 describe("collectionView(collectionView: UICollectionView, numberOfRowsInSection section: Int) -> Int") {
                     it("should return 0 rows for section 0") {
-                        expect(proxy.collectionView(collectionView, numberOfItemsInSection: 0)).to(equal(3))
+                        expect(collectionView.dataSource!.collectionView(collectionView, numberOfItemsInSection: 0)).to(equal(3))
                     }
                 }
                 describe("numberOfSectionsInCollectionView") {
                     it("should return 0") {
-                        expect(proxy.numberOfSectionsInCollectionView(collectionView)).to(equal(3))
+                        expect(collectionView.dataSource!.numberOfSectionsInCollectionView!(collectionView)).to(equal(3))
                     }
                 }
                 
                 describe("cellForItemAtIndexPath") {
                     it("should return the configured cell") {
-                        for section in 0..<proxy.numberOfSectionsInCollectionView(collectionView) {
-                            for row in 0..<proxy.collectionView(collectionView, numberOfItemsInSection: section) {
+                        for section in 0..<collectionView.dataSource!.numberOfSectionsInCollectionView!(collectionView) {
+                            for row in 0..<collectionView.dataSource!.collectionView(collectionView, numberOfItemsInSection: section) {
                                 let indexPath = NSIndexPath(forRow: row, inSection: section)
-                                let cell = proxy.collectionView(collectionView, cellForItemAtIndexPath:indexPath)
+                                let cell = collectionView.dataSource!.collectionView(collectionView, cellForItemAtIndexPath:indexPath)
                                 expect(cell.contentView.backgroundColor).to(equal(simpleDataSource.sections![section][row]))
                             }
                         }
                     }
                     it("should return an unconfigured cell for a non-existing indexpath") {
-                        let cell = proxy.collectionView(collectionView, cellForItemAtIndexPath:(NSIndexPath(forRow: 6, inSection: 6)))
+                        let cell = collectionView.dataSource!.collectionView(collectionView, cellForItemAtIndexPath:(NSIndexPath(forRow: 6, inSection: 6)))
                         expect(cell.contentView.backgroundColor).to(beNil())
                     }
                     
