@@ -17,9 +17,9 @@ private enum Error: ErrorType {
 class LoadingDataSource: Loadable {
     var fixtureData: [Int]
     var state: State<[Int],ErrorType> = .Empty
-    func loadData(completion: ([Int]) -> Void) throws {
+    func loadData(completion: (Result<[Int],ErrorType>) -> Void) {
         dispatch_async(dispatch_get_global_queue(QOS_CLASS_BACKGROUND, 0)) {
-            completion(self.fixtureData)
+            completion(Result.Success(self.fixtureData))
         }
     }
     init(fixtureData: [Int]) {
@@ -28,8 +28,8 @@ class LoadingDataSource: Loadable {
 }
 
 class FailingDataSource: LoadingDataSource {
-    override func loadData(completion: ([Int]) -> Void) throws {
-        throw Error.Fail
+    override func loadData(completion: (Result<[Int],ErrorType>) -> Void) {
+        completion(Result.Failure(Error.Fail))
     }
 }
 
