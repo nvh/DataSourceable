@@ -19,6 +19,7 @@ struct TitledSection<D: ElementsContaining>: SectionType {
 }
 
 struct SimpleTableViewDataSource: TestTableViewSourceable {
+    typealias ItemType = Int
     var data: [String:[Int]]? = ["b":[2,4,8],"a":[1,1,2,3],"c":[3,6,9]]
 
     func tableView(tableView: UITableView, titleForHeaderInSection sectionIndex: Int) -> String? {
@@ -35,6 +36,7 @@ extension SimpleTableViewDataSource: SectionCreating {
 }
 
 struct CustomSectionTableViewDataSource: TestTableViewSourceable {
+    typealias ItemType = Int
     typealias Section = TitledSection<[Int]>
     var sections: [Section]? = [TitledSection(data: [42], footerTitle: "footer text")]
 }
