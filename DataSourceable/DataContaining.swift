@@ -7,7 +7,7 @@
 //
 
 public protocol DataContaining {
-    typealias Data: ElementsContaining
+    associatedtype Data: ElementsContaining
     var data: Data? { get }
     var numberOfItems: Int { get }
     func item(atIndex index: Int) -> Data.Element?

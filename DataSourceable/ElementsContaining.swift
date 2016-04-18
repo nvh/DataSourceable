@@ -7,7 +7,7 @@
 //
 
 public protocol ElementsContaining {
-    typealias Element
+    associatedtype Element
     var count: Int { get }
     subscript(index: Int) -> Element? { get }
 }

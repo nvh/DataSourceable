@@ -7,7 +7,7 @@
 //
 
 public protocol Loadable: class {
-    typealias Data : EmptyCheckable
+    associatedtype Data : EmptyCheckable
     var state: State<Data,ErrorType> { get set }
     func loadData(completion: (Data) -> Void) throws
 }

@@ -7,12 +7,12 @@
 //
 
 public protocol Sectionable {
-    typealias Section: SectionType
+    associatedtype Section: SectionType
     var sections: [Section]? { get }
 }
 
 public protocol SectionCreating: Sectionable {
-    typealias Data
+    associatedtype Data
     var data: Data? { get }
     func createSections(data: Data) -> [Section]
 }

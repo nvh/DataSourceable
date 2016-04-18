@@ -7,9 +7,9 @@
 //
 
 public protocol CellProviding {
-    typealias ItemType
-    typealias CellType
-    typealias ViewType
+    associatedtype ItemType
+    associatedtype CellType
+    associatedtype ViewType
     func reuseIdentifier(forIndexPath indexPath: NSIndexPath) -> String
     func configure(cell cell: CellType, forItem item: ItemType, inView view: ViewType) -> CellType
 }
