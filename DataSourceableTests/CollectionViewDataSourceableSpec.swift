@@ -18,11 +18,17 @@ struct SimpleCollectionViewDataSource: CollectionViewDataSourceable {
     func reuseIdentifier(forIndexPath indexPath: NSIndexPath) -> String {
         return "identifier"
     }
-    
-    func configure(cell cell: UICollectionViewCell, forItem item: ItemType, inCollectionView collectionView: UICollectionView) -> UICollectionViewCell {
-        cell.contentView.backgroundColor = item
-        return cell
+}
+
+extension UICollectionViewCell: Configurable {
+    public typealias ItemType = UIColor
+    public func configure(forItem item: ItemType, inView: ContainingViewType) {
+        contentView.backgroundColor = item
     }
+}
+
+extension SimpleCollectionViewDataSource: CollectionViewCellProviding {
+    typealias CollectionViewCellType = UICollectionViewCell
 }
 
 

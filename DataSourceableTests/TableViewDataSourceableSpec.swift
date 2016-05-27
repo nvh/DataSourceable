@@ -27,6 +27,11 @@ struct SimpleTableViewDataSource: TestTableViewSourceable {
     }
 }
 
+extension SimpleTableViewDataSource: TableViewCellProviding {
+    typealias TableViewCellType = UITableViewCell
+}
+
+
 extension SimpleTableViewDataSource: SectionCreating {
     typealias Section = [Int]
     func createSections(data: [String:[Int]]) -> [Section] {
@@ -41,16 +46,21 @@ struct CustomSectionTableViewDataSource: TestTableViewSourceable {
     var sections: [Section]? = [TitledSection(data: [42], footerTitle: "footer text")]
 }
 
+extension CustomSectionTableViewDataSource: TableViewCellProviding {
+    typealias TableViewCellType = UITableViewCell
+}
+
+extension UITableViewCell: Configurable {
+    public typealias ItemType = Int
+    public func configure(forItem item: ItemType, inView: ContainingViewType) {
+        textLabel?.text = String(item)
+    }
+}
 
 protocol TestTableViewSourceable: TableViewDataSourceable {}
 extension TestTableViewSourceable {
     func reuseIdentifier(forIndexPath indexPath: NSIndexPath) -> String {
         return "identifier"
-    }
-    
-    func configure(cell cell: UITableViewCell, forItem item: Int, inTableView view: UITableView) -> UITableViewCell {
-        cell.textLabel?.text = "\(item)"
-        return cell
     }
 }
 
