@@ -6,4 +6,4 @@
 //  Copyright © 2015 Zeker Waar. All rights reserved.
 //
 
-public protocol TableViewDataSourceable: TableViewDataSource, Sectionable, TableViewCellProviding {}
+public protocol TableViewDataSourceable: TableViewDataSource, Sectionable, CellProviding {}

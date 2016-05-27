@@ -39,14 +39,17 @@ public extension CollectionViewDataSource where Self: Sectionable {
     }
 }
 
-public extension CollectionViewDataSource where Self: Sectionable, Self.ItemType == Self.Section.Data.Element, Self: CollectionViewCellProviding, Self.CellType == UICollectionViewCell, Self.ViewType == UICollectionView {
+public extension CollectionViewDataSource where Self: Sectionable, Self: CollectionViewCellProviding, Self.CollectionViewCellType.ItemType == Self.Section.Data.Element {
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let identifier = reuseIdentifier(forIndexPath: indexPath)
-        guard let itemAtIndexPath = item(atIndexPath: indexPath) else {
+        guard let item = item(atIndexPath: indexPath) else {
             return UICollectionViewCell()
         }
+        
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(identifier, forIndexPath: indexPath)
-        configure(cell: cell, forItem: itemAtIndexPath as ItemType, inCollectionView: collectionView)
+        if let cell = cell as? CollectionViewCellType, view = collectionView as? CollectionViewCellType.ContainingViewType {
+            cell.configure(forItem: item, inView: view)
+        }
         return cell
     }
 }

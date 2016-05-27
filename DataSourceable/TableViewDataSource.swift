@@ -46,14 +46,19 @@ public extension TableViewDataSource where Self: Sectionable {
     }
 }
 
-public extension TableViewDataSource where Self: Sectionable, Self.ItemType == Self.Section.Data.Element, Self: TableViewCellProviding, Self.CellType == UITableViewCell, Self.ViewType == UITableView {
+
+public extension TableViewDataSource where Self: Sectionable, Self: TableViewCellProviding, Self.TableViewCellType.ItemType == Self.Section.Data.Element {
+    
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let identifier = reuseIdentifier(forIndexPath: indexPath)
-        guard let itemAtIndexPath = item(atIndexPath: indexPath) else {
-            return tableView.dequeueReusableCellWithIdentifier(identifier)!
+        guard let item = item(atIndexPath: indexPath) else {
+            return tableView.dequeueReusableCellWithIdentifier(identifier) ?? UITableViewCell()
         }
-        let cell: CellType = tableView.dequeueReusableCellWithIdentifier(identifier, forIndexPath: indexPath)
-        configure(cell: cell, forItem: itemAtIndexPath, inTableView: tableView)
+        let cell = tableView.dequeueReusableCellWithIdentifier(identifier, forIndexPath: indexPath)
+        if let cell = cell as? TableViewCellType, view = tableView as? TableViewCellType.ContainingViewType {
+            cell.configure(forItem: item, inView: view)
+        }
         return cell
     }
 }
