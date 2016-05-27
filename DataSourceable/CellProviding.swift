@@ -15,8 +15,8 @@ public protocol CellProviding {
 }
 
 public protocol TableViewCellProviding: CellProviding {
-    typealias CellType = UITableViewCell
-    typealias ViewType = UITableView
+    associatedtype CellType = UITableViewCell
+    associatedtype ViewType = UITableView
     func configure(cell cell: UITableViewCell, forItem item: ItemType, inTableView tableView: UITableView) -> UITableViewCell
 }
 
@@ -27,8 +27,8 @@ extension TableViewCellProviding where Self.CellType == UITableViewCell, Self.Vi
 }
 
 public protocol CollectionViewCellProviding: CellProviding {
-    typealias CellType = UICollectionViewCell
-    typealias ViewType = UICollectionView
+    associatedtype CellType = UICollectionViewCell
+    associatedtype ViewType = UICollectionView
     func configure(cell cell: UICollectionViewCell, forItem item: ItemType, inCollectionView collectionView: UICollectionView) -> UICollectionViewCell
 }
 
