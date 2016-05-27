@@ -31,6 +31,7 @@
 		B3E89AAF1BCCE1E300C0FB4C /* LoadableSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E89AAE1BCCE1E300C0FB4C /* LoadableSpec.swift */; };
 		B3E89AB41BCCEAD300C0FB4C /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E89AB31BCCEAD300C0FB4C /* Quick.framework */; };
 		B3E89AB61BCCED6B00C0FB4C /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E89AB51BCCED6B00C0FB4C /* Nimble.framework */; };
+		B3F7E2211CF5F5CC00516636 /* Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F7E2201CF5F5CC00516636 /* Configurable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		B3E89AB01BCCEA6A00C0FB4C /* Cartfile.private */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile.private; sourceTree = "<group>"; };
 		B3E89AB31BCCEAD300C0FB4C /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = SOURCE_ROOT; };
 		B3E89AB51BCCED6B00C0FB4C /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = SOURCE_ROOT; };
+		B3F7E2201CF5F5CC00516636 /* Configurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configurable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 				B3E89AAA1BCCE10F00C0FB4C /* TableViewDataSourceable.swift */,
 				B3578A3A1C32BE6A00D1E340 /* CollectionViewDataSource.swift */,
 				B3E89AAC1BCCE16A00C0FB4C /* CollectionViewDataSourceable.swift */,
+				B3F7E2201CF5F5CC00516636 /* Configurable.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3F7E2211CF5F5CC00516636 /* Configurable.swift in Sources */,
 				B3E89AA41BCCE05100C0FB4C /* DataContaining.swift in Sources */,
 				B3578A391C32B9DC00D1E340 /* TableViewDataSourceProxy.swift in Sources */,
 				B3E89AA61BCCE05D00C0FB4C /* SectionType.swift in Sources */,
